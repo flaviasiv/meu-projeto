@@ -1,12 +1,18 @@
+import { useState } from 'react'
+
 import './App.css';
-import Condicional from './components/Condicional';
+import SeuNome from './components/SeuNome'
+import Saudacao from './components/Saudacao';
+
 
 function App() {
+  const [nome, setNome] = useState()
 
   return (
     <div className="App">
-      <h1>Reinderização Condicional</h1>
-      <Condicional />
+      <h1>State Lift</h1>
+      <SeuNome setNome={setNome} />
+      <Saudacao nome={nome} />
     </div>
   );
 }
